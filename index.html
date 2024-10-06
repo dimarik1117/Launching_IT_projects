@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+		<meta charset="UTF-8">
+		<title>Крестики-нолики</title>
+		<link rel="stylesheet" href="./src/css/index.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  </head>
+	<body>
+		
+		<header class="header">
+				<div></div>
+				<div class="header__description">
+					"Крестики-нолики"
+				</div>
+				<div></div>
+				
+		</header>
+
+		<div class="game-score">
+			<div class="game-score__content">
+				<h2 class="game-score__title">Счет</h2>
+				<p class="game-score__player">Компьютер:<span id="computer-count">0</span></p>
+				<p class="game-score__player">Вы:<span id="player-count">0</span></p>
+			</div>
+		</div>
+
+		<div class="game">
+			<table id="game__board">
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+			</table>
+		</div>
+
+		<div class="choose-player">
+			<h1 class="choose-player__title">Выберите, кто будет ходить первым:</h1>
+			<div id="players" class="choose-player__content">
+				<div class="choose-player__content-description">
+					<i class="fa fa-user-circle fa-5x fa-inverse" aria-hidden="true"></i>
+					<p class="choose-player__content-description-text">
+						Вы
+					</p>
+				</div>
+				<div class="choose-player__content-description">
+					<i class="fa fa-desktop fa-5x fa-inverse" aria-hidden="true"></i>
+					<p class="choose-player__content-description-text">
+						Компьютер
+					</p>
+				</div>
+			</div>
+		</div>
+		
+		<script src="./src/js/index.js" type="module"></script>
+	
+	</body>
+</html>
