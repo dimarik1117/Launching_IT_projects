@@ -90,6 +90,17 @@ td {
 	border: 3px solid white;
 }
 
+td.x {
+	background-color: #abfdab;
+	color: black;
+	background-size: 5px;
+}
+
+td.o {
+	background-color: #f99;
+	color: black;
+}
+
 td:hover {
 	background-color: #ccc;
 	cursor: pointer;
