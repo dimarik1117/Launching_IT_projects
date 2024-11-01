@@ -10,14 +10,24 @@ var articles = $('#game__board td');
 $(document).ready(function () {
 
 	// Первый ход игрока
-	$('.fa-user-circle').click(function () {
+	$('.choose-player__btn--player').click(function () {
 		newParty();
 	});
 
 	// Первый ход компьютера
-	$('.fa-desktop').click(function () {
+	$('.choose-player__btn--comp').click(function () {
 		newParty();
 		gameLogic.computer.randomStep($('.game > table  tr').length, gameLogic.gameModel, gameLogic.view);
+	});
+
+	gameLogic.view.showBlock('#history');
+
+	// Показ/скрытие блоков
+	$('.show-history__btn').click(function () {
+		gameLogic.view.showBlock('#history', '');
+	});
+	$('.header__help-btn').click(function () {
+		gameLogic.view.showBlock('.help-block', '');
 	});
 });
 

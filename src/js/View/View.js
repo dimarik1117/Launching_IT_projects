@@ -21,8 +21,16 @@ export default class View
 		
 		swal({title: message, icon: alert});
 		this.removeEvent();
+		this.addElementToHistory(this.gameLogic.board);
 		this.showBlock($('.choose-player'));
 	}
+
+	// Добавление нового элемента в историю игр
+	 addElementToHistory() {
+		 var historyBlock = document.getElementById("history");
+		 var elementOfHistory = this.board.cloneNode(true);
+		 historyBlock.appendChild(elementOfHistory);
+	 }
 
 	// Удаление событий, повешенных на ячейки игрового поля
 	removeEvent() {

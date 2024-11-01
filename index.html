@@ -1,29 +1,48 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
+  	<head>
 		<meta charset="UTF-8">
-		<title>Крестики-нолики</title>
-		<link rel="stylesheet" href="./src/css/index.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 		
+		<link rel="stylesheet" href="./src/css/index.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Itim&family=Luckiest+Guy&family=Rubik:ital,wght@0,300..900;1,300..900&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
 		<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-  </head>
+		
+		<link rel="icon" type="image/svg+xml" href="img/tic-tac-toe-black.png" />
+		<title>Крестики-нолики</title>
+  	</head>
 	<body>
 		
 		<header class="header">
-				<div></div>
-				<div class="header__description">
-					"Крестики-нолики"
-				</div>
-				<div></div>
+				<a class="header__link" href="#">
+					<img class="header__img" src="img/tic-tac-toe-white.png" width="50" height="50" alt="Иконка игры">
+				</a>
+				<h1 class="header__description">Крестики-нолики</h1>
+				<a class="header__help-btn">Правила</a>
 		</header>
 
+		<div class="help-block" style="display: none">
+				<p class="help-block__paragraph">
+					1. Игроки по&nbsp;очереди ставят на&nbsp;свободные клетки поля 3&times;3 знаки (Вы&nbsp;&mdash; крестики, компьютер&nbsp;&mdash; нолики).
+				</p>
+				<p class="help-block__paragraph">
+					2. Первый, выстроивший в&nbsp;ряд 3&nbsp;своих фигуры по&nbsp;вертикали, горизонтали или диагонали, выигрывает.
+				</p>
+				<p class="help-block__paragraph">
+					3. Если игроки заполнили все 9&nbsp;ячеек и&nbsp;оказалось, что ни&nbsp;в&nbsp;одной вертикали, горизонтали или диагонали нет трёх одинаковых знаков, партия заканчивается ничьёй.
+				</p>
+		</div>
+
 		<div class="game-score">
-			<div class="game-score__content">
-				<h2 class="game-score__title">Счет</h2>
-				<p class="game-score__player">Компьютер:<span id="computer-count">0</span></p>
-				<p class="game-score__player">Вы:<span id="player-count">0</span></p>
+			<h2 class="game-score__title">Счёт</h2>
+			<div class="game-score__players">
+				<p class="game-score__player">Вы: <span id="player-count">0</span></p>
+				<p class="game-score__player">Компьютер: <span id="computer-count">0</span></p>
 			</div>
 		</div>
 
@@ -48,24 +67,26 @@
 		</div>
 
 		<div class="choose-player">
-			<h1 class="choose-player__title">Выберите, кто будет ходить первым:</h1>
+			<h3 class="choose-player__title">Выберите, кто будет ходить первым:</h3>
 			<div id="players" class="choose-player__content">
-				<div class="choose-player__content-description">
+				<button class="choose-player__btn choose-player__btn--player" type="button" aria-label="Игрок">
 					<i class="fa fa-user-circle fa-5x fa-inverse" aria-hidden="true"></i>
-					<p class="choose-player__content-description-text">
-						Вы
-					</p>
-				</div>
-				<div class="choose-player__content-description">
+					<p class="choose-player__btn-text">Вы</p>
+				</button>
+				<button class="choose-player__btn choose-player__btn--comp" type="button" aria-label="Компьютер">
 					<i class="fa fa-desktop fa-5x fa-inverse" aria-hidden="true"></i>
-					<p class="choose-player__content-description-text">
-						Компьютер
-					</p>
-				</div>
+					<p class="choose-player__btn-text">Компьютер</p>
+				</button>
 			</div>
+		</div>
+
+		<div class="show-history">
+			<button class="show-history__btn" type="button">История партий</button>
+		</div>
+
+		<div id="history">
 		</div>
 		
 		<script src="./src/js/index.js" type="module"></script>
-	
 	</body>
 </html>
