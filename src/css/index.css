@@ -21,27 +21,6 @@ body, html {
 	background: radial-gradient(rgb(0, 0, 219), rgb(4, 4, 83));;
 }
 
-.header__link {
-	height: 50px;
-}
-
-.header__img {
-	width: 50px;
-	height: 50px;
-	/* Chrome all / Safari all */
-	-moz-user-select: none;
-	/* Firefox all */
-	-ms-user-select: none;
-	/* IE 10+ */
-	user-select: none;
-}
-
-.header__description {
-	font-size: 40px;
-	font-weight: 700;
-	margin: 0;
-}
-
 .header__help-btn {
 	font-size: 30px;
 	font-weight: 400;
@@ -58,6 +37,69 @@ body, html {
 	user-select: none;
 }
 
+.header__middle {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
+
+.header__description {
+	font-size: 40px;
+	font-weight: 700;
+	margin: 0;
+}
+
+.header__link {
+	height: 35px;
+}
+
+.header__link:hover {
+	opacity: 0.75;
+}
+
+.header__img {
+	width: 35px;
+	height: 35px;
+	/* Chrome all / Safari all */
+	-moz-user-select: none;
+	/* Firefox all */
+	-ms-user-select: none;
+	/* IE 10+ */
+	user-select: none;
+}
+
+.header__sounds {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
+
+.header__music-btn,
+.header__sound-btn {
+	background: none;
+	border: none;
+	cursor: pointer;
+	padding: 0;
+	height: 35px;
+	/* Chrome all / Safari all */
+	-moz-user-select: none;
+	/* Firefox all */
+	-ms-user-select: none;
+	/* IE 10+ */
+	user-select: none;
+}
+
+.header__music-btn:hover,
+.header__sound-btn:hover {
+	opacity: 0.75;
+}
+
+.header__music-img,
+.header__sound-img {
+	width: 35px;
+	height: 35px;
+}
+
 .help-block {
 	position: absolute;
 	padding: 15px;
@@ -68,7 +110,7 @@ body, html {
 	height: 375px;
 	background: radial-gradient(rgb(0, 0, 219), rgb(4, 4, 83));
 	top: 90px;
-	right: 1%;
+	left: 1%;
 	border: 3px dashed white;
 	border-radius: 20px;
 }
